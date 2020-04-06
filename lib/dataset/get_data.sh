@@ -1,6 +1,7 @@
 pip install kaggle
-mkdir ~/.kaggle
-cp kaggle.json ~/.kaggle
+mkdir -p ~/.kaggle
+cp -p kaggle.json ~/.kaggle
 chmod 600 ~/.kaggle/kaggle.json
-kaggle competitions download -c nlp-getting-started
-unzip nlp-getting-started.zip
+kaggle competitions download --force nlp-getting-started
+unzip -o nlp-getting-started.zip
+rm nlp-getting-started.zip
